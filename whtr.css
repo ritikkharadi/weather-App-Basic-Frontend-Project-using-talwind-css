@@ -1,0 +1,107 @@
+.inputcontainer .current-tab {
+    background:  #580541;
+}
+.weatherinfo {
+    display: none;
+}
+.body{
+    background: #C04848;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.weatherinfo.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+
+.info-container {
+    display: none;
+}
+
+.weatherinfo.active .info-container {
+    display: flex;
+     /* or display: block; depending on your layout */
+   height: 215px;
+
+}
+
+.formcontainer {
+    display: flex;
+    align-items: center;
+}
+
+.inputsearchform {
+    margin-right: 8px; /* Adjust the margin between the input and button */
+}
+
+.formcontainer.active .inputsearchform,
+.formcontainer.active .searchbutton {
+    display: block;
+}
+
+.formcontainer .inputsearchform,
+.formcontainer .searchbutton {
+    display: none;
+}
+
+
+.loadingcontainer {
+    display: none;
+}
+
+.loadingcontainer.active {
+    display: flex;
+    flex-direction: column; /* Adjust to make the content stack vertically */
+    align-items: center; /* Center the content horizontally */
+}
+
+
+.getlocationcontainer{
+    display: none;
+}
+
+.getlocationcontainer.active{
+    display:flex;
+}
+
+
+.maindiv {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  
+}
+
+
+/* 
+.div1 {
+    margin-right: auto;
+}
+
+.div2 {
+    margin-left: auto;
+} */
+.grantbutton {
+    background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+    color: white;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:  0.3s, border 0.3s;
+}
+
+.grantbutton:hover {
+    background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+    border: 2px solid #f27121;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="whtr.css">
+</head>
+
+<body class=" body min-h-screen flex-col align-middle justify-center">
+
+    <div class="text-center ">
+        <h1 class="text-white text-3xl  font-bold">Weather App</h1>
+
+        <div class="inputcontainer flex flex-row justify-evenly my-4">
+            <p class="yourweather mx-20 text-white text-2xl border rounded-sm w-44 current-tab" data-tab="userWeather">Your
+                Weather</p>
+            <p class="searchweather mx-20 text-white text-2xl border rounded-sm w-52" data-tab="searchWeather">Search Weather</p>
+        </div>
+
+        <div class="getlocationcontainer flex flex-col items-center justify-center">
+            <img src="location-position-icon-1640x2048-6jqx3f7e.png" class="h-10 w-10 my-3" alt="">
+            <p class="text-white text-2xl">Grant Location Access</p>
+            <p class="text-white my-1">Allow Access To Get Weather Information</p>
+            <button class="grantbutton bg-purple-600 text-base my-2 text-white border-white border-2">GRANT ACCESS</button>
+        </div>
+        
+
+        <!-- //search form -->
+        <form class="formcontainer flex ">
+            <input class="inputsearchform w-96 h-8 mx-40 my-6 border rounded-lg" placeholder="search the city">
+            <button class="searchbutton " type="submit">
+                <img src="477210.png" class="h-6 w-6" alt="">
+            </button>
+        </form>
+
+        <!-- loading container -->
+        <div class="loadingcontainer">
+          
+                <img class="h-20 w-20" src="loading.gif" alt="">
+                <p>Loading</p>
+            </div>
+            
+        </div>
+        
+        
+        <div class="weatherinfo bg-gradient-to-r from-purple-900 h-4/6 via-purple-800 to-purple-500 border-2 my-4 border-solid border-gray-500 rounded-lg w-4/5">
+    
+            <div class="maindiv  relative">
+                <!-- description, icon, temperature -->
+                <div class="div1 mx-52 my-20">
+                    <p class="temperature text-white font-bold text-4xl"></p>
+                    <p class="weatherdisc text-white text-base"></p>
+                    <img src="" class="weathericon" alt="">
+                </div>
+            
+                <!-- city name and flag -->
+                <div class="div2 mx-52 my-20">
+                    <p class="place text-white font-bold text-4xl"></p>
+                    <img src="" class="countryflag" alt="">
+                </div>
+            
+                <!-- Strip between maindiv and info-container -->
+                <div class="absolute w-8 full h- bg-deepBlue"></div>
+            </div>
+            
+            <div class="info-container flex-row justify-evenly h-4 bg-white w-full">
+                <div class="windspeed">
+                    <img src="wind.png" class="windspeedicon" alt="">
+                    <p class="windspeedheading" >windspeed</p>
+                    <p class="windspeedvalue"></p>
+                </div>
+            
+                <div class="humidity">
+                    <img src="humidity.png" class="humidityicon" alt="">
+                    <p class="humidityheading" >humidity</p>
+                    <p class="humidityvalue"></p>
+                </div>
+            
+                <div class="cloud">
+                    <img src="cloud.png" class="cloudicon" alt="">
+                    <p class="cloudheading" >cloud</p>
+                    <p class="cloudvalue"></p>
+                </div>
+            </div>
+            
+    <script src="whtr.js"></script>
+</body>
+
+</html>
